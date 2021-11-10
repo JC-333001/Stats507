@@ -1,14 +1,50 @@
-# **Jiaxi Chen**
-# jxichen@umich.edu
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 10 15:54:48 2021
 
+@author: jiaxichen
+"""
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_json: true
+#     notebook_metadata_filter: markdown
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.11.4
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
 
-from pydataset import data
-import pandas as pd
+# ## Topics in Pandas
+# **Stats 507, Fall 2021**
+#
+
+# ## Contents
+# Add a bullet for each topic and link to the level 2 title header using
+# the exact title with spaces replaced by a dash.
+#
+# + [Topic Title](#Topic-Title)
+# + [Topic 2 Title](#Topic-2-Title)
+# + [Data Cleaning](#Data-Cleaning)
+
+# ## Topic Title
+# Include a title slide with a short title for your content.
+# Write your name in *bold* on your title slide.
 
 # ## Data Cleaning
+# **Jiaxi Chen**
+
 # Reference from: 
 # * https://www.w3schools.com/python/pandas/pandas_cleaning.asp
 # * https://pandas.pydata.org/docs/reference/index.html
+#
+#
 # ### Finding Duplicates
 # - Duplicate rows are rows that have been registered more than one time.
 #
@@ -17,6 +53,10 @@ import pandas as pd
 #     - `keep = False` : Mark all duplicates as True.
 #     - `keep = first` : Mark duplicates as True except for the first occurrence.
 #     - `keep = last` : Mark duplicates as True except for the last occurrence.
+
+import pandas as pd
+import numpy as np
+from pydataset import data
 
 df = data('iris')
 df.head()
@@ -59,3 +99,5 @@ df["set_of_numbers"].fillna(x, inplace = True)
 print(df)
 nan_count = df['set_of_numbers'].isnull().sum()
 print (nan_count)
+
+
